@@ -2,7 +2,7 @@
   "name": "teste-conta-simples-ts",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "main": "src/question-1.ts",
   "scripts": {
     "test": "jest"
   },
