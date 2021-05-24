@@ -1,4 +1,4 @@
-import { Transaction } from "../types";
+import { Transaction, TransactionType } from "../types";
 /**
  * A Conta Simples cobra uma taxa de 3% em todas as transações feitas pelos cartões.
  * Receba uma lista de transações do tipo {Transaction} e obtenha o total somado da
@@ -24,6 +24,17 @@ import { Transaction } from "../types";
  *
  * Saida: 15
  * */
+
+function getFeeAmount(amount: number, FEE: number) {
+  return (amount * FEE) / (100 + FEE);
+}
 export default (data: Transaction[]) => {
-  return data;
+  const FEE = 3;
+  return data.reduce(
+    (ac, current) =>
+      current.type === TransactionType.CARD
+        ? getFeeAmount(current.amount, FEE) + ac
+        : ac,
+    0
+  );
 };

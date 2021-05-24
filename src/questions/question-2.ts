@@ -1,6 +1,6 @@
-import { Transaction } from "../types";
+import { Transaction, TransactionType } from "../types";
 /**
- * Receba uma lista de {Transaction} e adicione em todas as transações uma taxa de 3% no valor delas.
+ * Receba uma lista de {Transaction} e adicione em todas as transações, do tipo cartão, uma taxa de 3% no valor delas.
  * Ao final retorne a lista completa (com todas as transações)
  *
  * Entrada:
@@ -36,6 +36,13 @@ import { Transaction } from "../types";
  * ```
  *
  */
+
+function addFeeTransaction(transaction: Transaction, fee: number): Transaction {
+  return { ...transaction, amount: transaction.amount * (1 + fee / 100) };
+}
 export default (data: Transaction[]) => {
-  return data;
+  const FEE = 3;
+  return data.map((t) =>
+    t.type === TransactionType.CARD ? addFeeTransaction(t, FEE) : t
+  );
 };

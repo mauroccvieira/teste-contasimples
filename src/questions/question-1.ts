@@ -1,4 +1,4 @@
-import { Transaction } from "../types";
+import { Transaction, TransactionType } from "../types";
 /**
  * Retorne uma nova lista de transações contendo apenas transações do tipo CARD
  *
@@ -33,5 +33,5 @@ import { Transaction } from "../types";
  */
 
 export default (data: Transaction[]) => {
-  return data;
+  return data.filter((f) => f.type === TransactionType.CARD);
 };
