@@ -1,12 +1,12 @@
 import question from "../src/questions/question-3";
 import { TransactionType } from "../src/types";
 
-test("Apenas cartões", () => {
+test("Teste 3.A", () => {
   let code = question([
     {
       id: 1,
       amount: 100,
-      createAt: "2021-01-10T00:00:00.000Z",
+      createAt: "2021-01-10T00:00:00.000  Z",
       type: TransactionType.CARD
     },
     {
@@ -19,7 +19,7 @@ test("Apenas cartões", () => {
   expect(code).toBe(6);
 });
 
-test("Apenas misturados", () => {
+test("Teste 3.B", () => {
   let code = question([
     {
       id: 1,
