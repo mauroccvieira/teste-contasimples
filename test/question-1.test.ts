@@ -1,4 +1,4 @@
-import question from "../src/questions/question-2";
+import question from "../src/questions/question-1";
 import { TransactionType } from "../src/types";
 
 test("Teste A", () => {
