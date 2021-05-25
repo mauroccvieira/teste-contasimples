@@ -1,6 +1,7 @@
 import { Transaction } from "../domain/transaction";
 /**
- * Receba uma lista de {Transaction} e adicione em todas as transações uma taxa de 3% no valor delas.
+ * Receba uma lista de {Transaction} e adicione em
+ * todas as transações de cartão {TransactionType.CARD} uma taxa de 3% do valor.
  * Ao final retorne a lista completa (com todas as transações)
  *
  * Entrada:
