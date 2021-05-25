@@ -1,6 +1,6 @@
 import { Transaction } from "../domain/transaction";
 /**
- * A Conta Simples cobra uma taxa de 3% em todas as transações feitas pelos cartões. 
+ * A Conta Simples cobra uma taxa de 3% em todas as transações feitas pelos cartões.
  * Receba uma lista de transações do tipo {Transaction}, com as taxas já adicionadas, e obtenha a receita da conta simples.
  *
  * ### Exemplo
@@ -23,6 +23,16 @@ import { Transaction } from "../domain/transaction";
  *
  * Saida: 3
  * */
+/**
+ * 
+ * @param amount valor total (com taxa adicionada)
+ * @param FEE taxa
+ * @returns valor original
+ */
+function getFeeAmount(amount: number, FEE: number) {
+  return (amount * FEE) / (100 + FEE);
+}
+
 export default (data: Transaction[]) => {
   return data;
 };
