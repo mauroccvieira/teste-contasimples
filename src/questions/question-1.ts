@@ -1,4 +1,4 @@
-import { Transaction, TransactionType } from "../types";
+import { Transaction } from "../domain/transaction";
 /**
  * Retorne uma nova lista de transações contendo apenas transações do tipo CARD
  *

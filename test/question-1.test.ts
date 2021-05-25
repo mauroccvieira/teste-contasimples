@@ -1,5 +1,5 @@
 import question from "../src/questions/question-1";
-import { TransactionType } from "../src/types";
+import { TransactionType } from "../src/domain/transaction";
 
 test("Teste A", () => {
   let code = question([]);
