@@ -9,7 +9,7 @@ import { Transaction } from "../domain/transaction";
  * ```ts
  *  [{
  *    "id": 1,
- *    "amount": 500,
+ *    "amount": 103,
  *    "createAt": "2021-01-10T00:00:00.000Z",
  *    "type": 1
  *  },
@@ -21,7 +21,7 @@ import { Transaction } from "../domain/transaction";
  *  }]
  * ```
  *
- * Saida: 15
+ * Saida: 3
  * */
 export default (data: Transaction[]) => {
   return data;
