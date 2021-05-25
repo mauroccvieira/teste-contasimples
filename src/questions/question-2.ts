@@ -1,7 +1,8 @@
 import { Transaction } from "../domain/transaction";
 import { TransactionType } from "../domain/transaction-type";
 /**
- * Receba uma lista de {Transaction} e adicione em todas as transações, do tipo cartão, uma taxa de 3% no valor delas.
+ * Receba uma lista de {Transaction} e adicione em
+ * todas as transações de cartão {TransactionType.CARD} uma taxa de 3% do valor.
  * Ao final retorne a lista completa (com todas as transações)
  *
  * Entrada:

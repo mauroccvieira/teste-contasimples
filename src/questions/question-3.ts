@@ -10,7 +10,7 @@ import { TransactionType } from "../domain/transaction-type";
  * ```ts
  *  [{
  *    "id": 1,
- *    "amount": 500,
+ *    "amount": 103,
  *    "createAt": "2021-01-10T00:00:00.000Z",
  *    "type": 1
  *  },
@@ -22,7 +22,7 @@ import { TransactionType } from "../domain/transaction-type";
  *  }]
  * ```
  *
- * Saida: 15
+ * Saida: 3
  * */
 
 function getFeeAmount(amount: number, FEE: number) {
