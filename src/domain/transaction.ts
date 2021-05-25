@@ -1,10 +1,4 @@
-export enum TransactionType {
-  PAYMENT,
-  CARD,
-  TRANSFEROUT,
-  TRANSFERIN,
-  RECHARGE_SLIP
-}
+import { TransactionType } from "./transaction-type";
 
 export class Transaction {
   constructor(

@@ -1,5 +1,5 @@
 import { data } from "../input";
-import { Transaction } from "../types";
+import { Transaction } from "../domain/transaction";
 
 export function FindTransactionById(id: number): Promise<Transaction> {
   return new Promise((resolve, reject) => {

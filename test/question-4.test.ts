@@ -1,5 +1,5 @@
 import question from "../src/questions/question-4";
-import { TransactionType } from "../src/types";
+import { TransactionType } from "../src/domain/transaction";
 
 test("Teste 4.A", async () => {
   let code = await question([

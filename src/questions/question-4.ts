@@ -1,5 +1,5 @@
 import { FindTransactionById } from "../integration/find-transaction-by-id";
-import { Transaction } from "../types";
+import { Transaction } from "../domain/transaction";
 /**
  * A função abaixo recebe uma lista de Ids de transações,
  * para cada uma delas, consulte o endpoint de detalhe
