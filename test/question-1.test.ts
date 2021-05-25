@@ -1,5 +1,5 @@
+import { TransactionType } from "../src/domain/transaction-type";
 import question from "../src/questions/question-1";
-import { TransactionType } from "../src/domain/transaction";
 
 test("Teste A", () => {
   let code = question([]);
@@ -12,14 +12,14 @@ test("Teste B", () => {
       id: 1,
       amount: 150.85,
       createAt: "2021-01-10T00:00:00.000Z",
-      type: TransactionType.PAYMENT
+      type: TransactionType.PAYMENT,
     },
     {
       id: 2,
       amount: 150.85,
       createAt: "2021-01-10T00:00:00.000Z",
-      type: TransactionType.CARD
-    }
+      type: TransactionType.CARD,
+    },
   ]);
   expect(code.length).toBe(1);
 });
@@ -30,14 +30,14 @@ test("Teste C", () => {
       id: 1,
       amount: 150.85,
       createAt: "2021-01-10T00:00:00.000Z",
-      type: TransactionType.RECHARGE_SLIP
+      type: TransactionType.RECHARGE_SLIP,
     },
     {
       id: 2,
       amount: 150.85,
       createAt: "2021-01-10T00:00:00.000Z",
-      type: TransactionType.RECHARGE_SLIP
-    }
+      type: TransactionType.RECHARGE_SLIP,
+    },
   ]);
   expect(code.length).toBe(0);
 });

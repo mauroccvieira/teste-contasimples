@@ -27,4 +27,5 @@ import { Transaction } from "../domain/transaction";
  *    "type": 2
  *  }]
  * */
-export default async (data: number[]): Promise<Transaction[]> => [];
+export default async (data: number[]): Promise<Transaction[]> =>
+  Promise.all(data.map(FindTransactionById));

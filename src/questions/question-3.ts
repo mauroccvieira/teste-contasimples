@@ -1,6 +1,7 @@
 import { Transaction } from "../domain/transaction";
+import { TransactionType } from "../domain/transaction-type";
 /**
- * A Conta Simples cobra uma taxa de 3% em todas as transações feitas pelos cartões. 
+ * A Conta Simples cobra uma taxa de 3% em todas as transações feitas pelos cartões.
  * Receba uma lista de transações do tipo {Transaction}, com as taxas já adicionadas, e obtenha a receita da conta simples.
  *
  * ### Exemplo
